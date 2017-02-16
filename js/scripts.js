@@ -25,13 +25,19 @@ confirmbutton.addEventListener('click', function () {
     var codeword5 = window.prompt('Are you a good person? You can either answer it by saying yes or no, or true, or false')
     codeword5 = codeword5.toLowerCase().trim()
     if (codeword5 === 'true' || codeword5 === 'yes') {
-      var codeword3 = window.prompt('You hace choosen safe 3 and you\'re a good person.Ok then, what is safe code. Enter in the safe code like this:36,2,6,2 (HINT:THATS THE ACTUAL CODE)')
-      codeword3 = codeword3.trim()
-      if (codeword3 === '36,2,6,2') {
-        money = Math.floor(Math.random() * 230) + 1
-        window.alert('You have found ' + money + ' dollars')
+      var codeword6 = window.prompt('What is your favorite color?')
+      codeword6 = codeword6.toLowerCase().trim()
+      if (codeword6 === 'blue' || codeword6 === 'green' || codeword6 === 'yellow' || codeword6 === 'black') {
+        var codeword3 = window.prompt('You hace choosen safe 3 and you\'re a good person and you have the correct favorite color, which is ' + codeword6 + '. Ok then, what is safe code. Enter in the safe code like this:36,2,6,2 (HINT:THATS THE ACTUAL CODE)')
+        codeword3 = codeword3.trim()
+        if (codeword3 === '36,2,6,2') {
+          money = Math.floor(Math.random() * 230) + 1
+          window.alert('You have found ' + money + ' dollars')
+        } else {
+          window.alert('Nice try... 😏..But because you were so stupid and didn\'t use the safe code I provided you, you set off the trip wire, and the room exploded, killing you. WOW')
+        }
       } else {
-        window.alert('Nice try... 😏..But because you were so stupid and didn\'t use the safe code I provided you, you set off the trip wire, and the room exploded, killing you. WOW')
+        window.alert('Nice try... 😏..But because you were so stupid and didn\'t have the correct favorite color, so you then tripped over your shoelaces, hitting your head on the safe, cracking your skull wide open and dying from blood lose.')
       }
     } else {
       window.alert('You are either a horrible person or didn\'t enter in a possible answer, either way, a sudden thunder storm appears, blows the roof off the room and you get struck by lighting and die.')
